@@ -1,0 +1,19 @@
+{
+  "services": {
+    "service1": {
+      "host": "127.0.0.1",
+      "port": 3001
+    },
+    "service2": {
+      "host": "127.0.0.1",
+      "port": 3002
+    }
+  },
+  "log": {
+    "LogDir": "./logs/",
+    "LogPrefix": "rome-vpclink-task",
+    "LogSuffix": ".log",
+    "LogSize": 100,
+    "LogLevel": "DEBUG"
+  }
+}

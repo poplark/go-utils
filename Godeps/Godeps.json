@@ -1,0 +1,22 @@
+{
+	"ImportPath": "first",
+	"GoVersion": "go1.11",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/bitly/go-simplejson",
+			"Comment": "v0.5.0-8-g0c96595",
+			"Rev": "0c965951289cce37dec52ad1f34200fefc816777"
+		},
+		{
+			"ImportPath": "github.com/derekstavis/go-qs",
+			"Comment": "0.3.0",
+			"Rev": "9eef69e6c4e70cf2da34be55a5c0e1ae0b6ca0c5"
+		},
+		{
+			"ImportPath": "uframework/log",
+			"Comment": "v0.4-22-ga6e1825",
+			"Rev": "a6e1825e13ef8fb0d7b0f601024e1945e859dafb"
+		}
+	]
+}
