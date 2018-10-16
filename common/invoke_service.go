@@ -30,8 +30,7 @@ func InvokeService(url string, method string, data map[string]interface{}) ([]by
 			return nil, err
 		}
 		defer res.Body.Close()
-		result, err := ioutil.ReadAll(res.Body)
-		return result, err
+		return ioutil.ReadAll(res.Body)
 	} else {
 		querystring, err := qs.Marshal(data)
 
