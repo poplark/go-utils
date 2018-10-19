@@ -1,9 +1,9 @@
 package main
 
 import (
-	"first/common"
-	"first/logic"
-	// "first/logic/common"
+	"go-utils/common"
+	"go-utils/logic"
+	// "go-utils/logic/common"
 	"fmt"
 	// "github.com/bitly/go-simplejson"
 	// "runtime"

@@ -1,5 +1,5 @@
 {
-	"ImportPath": "first",
+	"ImportPath": "go-utils",
 	"GoVersion": "go1.11",
 	"GodepVersion": "v80",
 	"Deps": [
