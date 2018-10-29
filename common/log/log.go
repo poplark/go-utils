@@ -27,7 +27,7 @@ const (
 
 func NewLogger(level LoggerLevel, output string) *Logger {
 	logger := Logger{level, output, nil, nil}
-	logger.transports = []Transport{NewConsoleTransport()}
+	logger.transports = []Transport{NewConsoleTransport(), NewFileTransport("", "ulog_", ".log", true, 1000)}
 	// logger.OpenLogFile()
 	return &logger
 }
