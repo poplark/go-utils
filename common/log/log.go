@@ -13,6 +13,7 @@ type Logger struct {
 	output  string
 	logfile *os.File
 	// buf - text buffer size
+	transports []Transport
 }
 
 const (
@@ -25,9 +26,9 @@ const (
 )
 
 func NewLogger(level LoggerLevel, output string) *Logger {
-	fmt.Println("config", level, output)
-	logger := Logger{level, output, nil}
-	logger.OpenLogFile()
+	logger := Logger{level, output, nil, nil}
+	logger.transports = []Transport{NewConsoleTransport()}
+	// logger.OpenLogFile()
 	return &logger
 }
 
@@ -75,7 +76,9 @@ func (logger *Logger) Write(t string, msg string) {
 	// todo - use fmt as a transport
 	now := time.Now()
 	txt := fmt.Sprintf("[%s] [%s] - %s\n", now.Format("2006-01-02 15:04:05.000"), t, msg)
-	log := []byte(txt)
+	for _, tp := range logger.transports {
+		tp.Write(txt, t)
+	}
 	// todo - deal with error
-	logger.logfile.Write(log)
+	// logger.logfile.Write(log)
 }

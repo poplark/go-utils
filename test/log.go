@@ -8,9 +8,10 @@ import (
 func main() {
 	fmt.Println("test logger")
 
-	fmt.Println("test logger", log.INFO)
 	logger1 := log.NewLogger(log.INFO, ".")
-	logger1.Info("1111")
-	logger1.Info("2222")
-	logger1.Info("6666")
+	logger1.Debug("111111")
+	logger1.Info("222222")
+	logger1.Warn("333333")
+	logger1.Error("444444")
+	logger1.Fatal("555555")
 }
